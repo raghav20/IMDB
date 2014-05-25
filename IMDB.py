@@ -12,7 +12,8 @@ except:
 #else :
  #   movie = '+'.join(sys.argv[1].split())
 
-
+# Get necessary COlumns from IMDB dataset .
+# ImDb scrapping
 page=urllib2.urlopen("http://www.imdb.com/find?s=tt&q=Gravity")
 soup = BeautifulSoup(page.read())
 universities=soup.findAll('td',{'class':'result_text'})[0].string
